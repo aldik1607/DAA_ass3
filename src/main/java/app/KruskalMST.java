@@ -76,3 +76,4 @@ public class KruskalMST {
         return new Result(lastMst, lastCost, sumOps / trials, sumTime / trials);
     }
 }
+    
