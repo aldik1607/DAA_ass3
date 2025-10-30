@@ -13,13 +13,13 @@ This project implements and compares Prim's and Kruskal's algorithms for finding
 
 ## Project Structure
 src/main/java/app/
-├── AppMain.java # Main application runner
-├── PrimMST.java # Prim's algorithm implementation
-├── KruskalMST.java # Kruskal's algorithm implementation
-├── Graph.java # Graph data structure
-├── Edge.java # Edge representation
-├── DisjointSet.java # Union-Find data structure
-└── GraphGenerator.java # Test graph generator
+AppMain.java # Main application runner
+PrimMST.java # Prim's algorithm implementation
+KruskalMST.java # Kruskal's algorithm implementation
+Graph.java # Graph data structure
+Edge.java # Edge representation
+DisjointSet.java # Union-Find data structure
+GraphGenerator.java # Test graph generator
 
 ## Run MST algorithms: 
 java -cp "src/main/java;." app.AppMain input.json
