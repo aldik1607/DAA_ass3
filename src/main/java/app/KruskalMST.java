@@ -1,16 +1,7 @@
 package app;
 import java.util.*;
 
-/**
- * Kruskal's algorithm with clear ops counting and runRepeated helper.
- *
- * Counting rules (ops):
- *  - +1 for each find call (we count two finds per edge: for u and v)
- *  - +1 for each successful union (when two different components are merged)
- *  - We do not count the internal operations of sorting (but we measure total time including sort).
- *
- * Time measurement: System.nanoTime() -> ms
- */
+
 public class KruskalMST {
 
     public static class Result {
@@ -31,24 +22,21 @@ public class KruskalMST {
         long t0 = System.nanoTime();
 
         List<Edge> edges = new ArrayList<>(g.edges);
-        Collections.sort(edges); // sort by weight (Edge implements Comparable)
-        // note: we don't add explicit ops for sort; document it in report
+        Collections.sort(edges);
 
         DisjointSet ds = new DisjointSet();
         ds.makeSet(g.vertices);
 
         List<Edge> mst = new ArrayList<>();
         for(Edge e: edges){
-            // count two find operations
             String ru = ds.find(e.u); ops++;
             String rv = ds.find(e.v); ops++;
             if(ru == null || rv == null) continue;
             if(!ru.equals(rv)){
-                // union by roots (no extra finds)
                 boolean united = ds.unionRoots(ru, rv);
                 if (united) {
                     mst.add(e);
-                    ops++; // count successful union
+                    ops++;
                 }
             }
             if(mst.size() == g.vertices.size() - 1) break;
@@ -76,4 +64,3 @@ public class KruskalMST {
         return new Result(lastMst, lastCost, sumOps / trials, sumTime / trials);
     }
 }
-    

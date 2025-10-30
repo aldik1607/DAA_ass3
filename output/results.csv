@@ -1,0 +1,15 @@
+file,n,m,density,trials,algo,time_ms,ops,totalCost
+input.json,6,9,dense,1,Prim,40,137,13,00
+input.json,6,9,dense,1,Kruskal,4,17,13,00
+input.json,6,9,dense,1,Prim,6,137,13,00
+input.json,6,9,dense,1,Kruskal,1,17,13,00
+dense10.json,10,22,dense,3,Prim,3,279,249,00
+dense10.json,10,22,dense,3,Kruskal,0,35,249,00
+dense30.json,30,217,dense,3,Prim,0,1899,280,00
+dense30.json,30,217,dense,3,Kruskal,0,145,280,00
+medium10.json,10,45,dense,3,Prim,0,422,143,00
+medium10.json,10,45,dense,3,Kruskal,0,29,143,00
+medium30.json,30,150,dense,3,Prim,0,1442,384,00
+medium30.json,30,150,dense,3,Kruskal,0,137,384,00
+medium50.json,50,250,medium,3,Prim,0,2402,815,00
+medium50.json,50,250,medium,3,Kruskal,0,323,815,00

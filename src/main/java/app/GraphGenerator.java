@@ -7,16 +7,6 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.io.File;
 import java.util.*;
 
-/**
- * Graph JSON generator.
- *
- * Usage:
- *   mvn exec:java -Dexec.mainClass="app.GraphGenerator" -Dexec.args="<n> <density> <outPath> <seed>"
- * Example:
- *   mvn exec:java -Dexec.mainClass="app.GraphGenerator" -Dexec.args="50 sparse output/graph_50_sparse.json 42"
- *
- * density: sparse | medium | dense
- */
 public class GraphGenerator {
 
     public static void main(String[] args) throws Exception {
